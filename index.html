@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Bruist </title>
+    <title>Fruit Brust</title>
+    <html data-theme="light">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!-- tailwind and daisy Ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .lato {
+            font-family: 'Lato', sans-serif;
+        }
+        #inputid::placeholder {
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    
-</body>
-</html>
+    <header class="max-w-screen-xl mx-auto lato">
+        <!-- this is nav section  -->
+        <section class="px-2 md:px-16 lg:px-28 lg:py-4 mt-3">
+            <nav class="lg:bg-[#F85559] px-5 py-1 rounded-full">
+                <div class="navbar">
+                    <div class="navbar-start hidden lg:flex lg:text-white">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a class="hover:text-white">Home</a></li>
+                            <li><a class="hover:text-white">About Us</a></li>
+                            <li><a class="hover:text-white">Shop</a></li>
+                            <li><a class="hover:text-white">All Fruits</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-center lg:flex lg:justify-between">
+                        <div class="flex justify-end lg:text-white">
+                            <div class="flex justify-center items-center gap-2 cursor-pointer">
+                                <img src="./images/logo.png" alt="" class="w-[30px] md:w-[40px]">
+                                <h2 class="text-xl md:text-2xl font-bold">Fruit Burst</h2>
+                            </div>
+                        </div>
+                        <div class="dropdown absolute right-8 md:right-20">
+                            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                                <i class="fa-solid fa-bars fa-2x text-2xl lg:text-white"></i>
+                            </label>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-box w-[200px] absolute -right-2 bg-base-200">
+                                <li><a>Home</a></li>
+                                <li class=""><a>About Us</a></li>
+                                <li><a>Shop</a></li>
+                                <li><a>All Fruits</a></li>
+                                <li class="relative"><a>
+                                        <input type="text" name="fruit"
+                                            class="px-4 py-1 rounded-full w-full border border-gray-500" id="inputid"
+                                            placeholder="Search Here">
+                                        <div class="absolute right-6">
+                                            <i class="fa-solid fa-magnifying-glass text-gray-500 cursor-pointer"></i>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-end hidden lg:flex relative">
+                        <input type="text" name="fruit" class="px-4 py-1 rounded-full w-4/6" id="inputid"
+                            placeholder="Search Here">
+                        <div class="absolute right-3">
+                            <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
